@@ -3,7 +3,7 @@ package com.credentials.main;
 import java.util.Scanner;
 
 import com.credentials.model.Employee;
-import com.credentials.service.Credentials;
+import com.credentials.service.CredentialService;
 
 public class DriverClass {
 	public static void main(String[] args) {
@@ -17,7 +17,7 @@ public class DriverClass {
 		String lastName = in.nextLine();
 
 		Employee emp = new Employee(firstName, lastName);
-		Credentials credentials = new Credentials();
+		CredentialService credentials = new CredentialService();
 
 		int option;
 
