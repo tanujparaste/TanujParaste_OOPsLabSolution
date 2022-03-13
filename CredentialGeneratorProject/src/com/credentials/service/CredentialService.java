@@ -5,6 +5,8 @@ import java.util.Random;
 import com.credentials.model.Employee;
 
 public class CredentialService {
+	private static String COMPANY_URL = "abc.com";
+
 	private String generateEmailAddress(Employee emp, String dept) {
 		String firstName = emp.getFirstName().toLowerCase();
 		String lastName = emp.getLastName().toLowerCase();
@@ -12,7 +14,7 @@ public class CredentialService {
 		// remove inner whitespaces
 		dept = dept.replaceAll("\\s", "").toLowerCase();
 
-		return firstName + lastName + "@" + dept + ".company.com";
+		return firstName + lastName + "@" + dept + "." + COMPANY_URL;
 	}
 
 	private String generatePassword() {
